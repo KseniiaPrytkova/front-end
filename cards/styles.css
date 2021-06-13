@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background: black;
+  /* body will cover 100% of window space */
+  height: 100vh;
+  /* align the slides properly */
+  display: flex;
+  /* center all elements */
+  justify-content: center;
+  /* center all elements also vertically */
+  align-items: center;
+
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide {
+  /* 80vh - 80% from the visible part of the screen; responsive! */
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  /* for text */
+  color: white;
+  /* so that each element is stretched proportionally */
+  flex: 1;
+  /* so that each of the headings is positioned relative to each of the slides */
+  position: relative;
+
+  /* picture positioning */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide h3 {
+  position: absolute;
+  font-size: 24px;
+  /* will place text to the bottom */
+  bottom: 20px;
+  left: 20px;
+  /* remove defailt indentation */
+  margin: 0;
+}
+
