@@ -8,7 +8,7 @@ body {
   font-family: 'Muli', sans-serif;
   overflow: hidden;
   margin: 0;
-  background: black;
+  background: #182531;
   /* body will cover 100% of window space */
   height: 100vh;
   /* align the slides properly */
@@ -18,6 +18,11 @@ body {
   /* center all elements also vertically */
   align-items: center;
 
+}
+h1 {
+  margin: 200px 40px;
+  color: hsl(303, 98%, 51%);
+  text-shadow: 2px 2px black;
 }
 
 .container {
@@ -33,7 +38,7 @@ body {
   margin: 10px;
   cursor: pointer;
   /* for text */
-  color: white;
+  color: hsl(303, 98%, 51%);
   /* so that each element is stretched proportionally */
   flex: 1;
   /* so that each of the headings is positioned relative to each of the slides */
@@ -43,15 +48,29 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  transition: all 500ms ease-in-out;
 }
 
 .slide h3 {
   position: absolute;
-  font-size: 24px;
+  font-size: 34px;
+  text-shadow: 2px 2px #182531;
   /* will place text to the bottom */
   bottom: 20px;
   left: 20px;
   /* remove defailt indentation */
   margin: 0;
+  /* when card is not active don't display header; */
+  opacity: 0;
 }
 
+.slide.active {
+  flex: 10;
+}
+
+.slide.active h3 {
+  opacity: 1;
+  /* animation; 0.4s delay for header to appear */
+  transition: opacity 0.3s ease-in 0.4s;
+}
