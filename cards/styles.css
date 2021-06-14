@@ -63,6 +63,7 @@ h1 {
   margin: 0;
   /* when card is not active don't display header; */
   opacity: 0;
+  background-color: white;
 }
 
 .slide.active {
