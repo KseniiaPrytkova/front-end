@@ -74,6 +74,7 @@ function dragLeave(event) {
 
 function dragDrop(event) {
     console.log('drag drop');
+    // event.target.classList.add('dropped');
     event.target.classList.remove('hovered');
     event.target.append(item);
 }

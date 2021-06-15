@@ -64,13 +64,22 @@ body {
 }
 
 .hold {
-  border: 5px solid #eee;
+  /* border: 5px solid #eee; */
+  
+  /* background-image: linear-gradient(90deg, transparent, transparent 50%, #fff 50%, #fff 100%), linear-gradient(90deg, #69d2e7, #a7dbd8, #e0e4cc, #f38630, #fa6900);
+  background-size: 20px 3px, 100% 3px;
+  border: none; */
+
+  box-shadow: 0 0 0 3px #d285ff inset;
+  border: dashed 3px darkturquoise;
+
 }
+
 
 .hide {
   display: none;
 }
 
 .hovered {
-  border-top: 2px solid #8ed7ed;
+  border-top: 3px dashed darkturquoise;
 }
