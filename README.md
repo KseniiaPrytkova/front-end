@@ -12,4 +12,5 @@ https://jsfiddle.net/kseniiaprytkova/ftzku16w/3/
 ##  Drag & Drop
 https://jsfiddle.net/kseniiaprytkova/g2hxon9q/1/
 
-
+##  Slider
+https://jsfiddle.net/kseniiaprytkova/q05uync9/
