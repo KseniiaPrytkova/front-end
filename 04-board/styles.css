@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  /* put everything in one line with flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* to see the squares after adding square from js file to html */
+  flex-wrap: wrap;
+  max-width: 400px;
+}
+
+.square {
+  width: 16px;
+  height: 16px;
+  background: #1d1d1d;
+  margin: 2px;
+  box-shadow: 0 0 2px #000;
+  /* animation happens in 2 seconds with function aese */
+  transition: 2s ease;
+}
+
+/* so that the color appears immediately without animation (with pseudo selector) */
+.square:hover {
+  transition-duration: 0s;
+}
