@@ -4,7 +4,8 @@ const board = document.querySelector('#board');
 // it is good practice to denote constants in capital letters
 const SQUARES_NUMBER = 500;
 // const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
-const colors = ['#e74c3c', '#8e44ad', '#3498db', '#e67e22', '#2ecc71'];
+// const colors = ['#e74c3c', '#8e44ad', '#3498db', '#e67e22', '#2ecc71'];
+const colors = ['#00FF00', '#F2EA02', '#0033FF', '#FF00CC', '#6E0DD0']; // neon
 
 for (let i = 0; i < SQUARES_NUMBER; i++) {
     // dynamically create an element (fn createElement)
