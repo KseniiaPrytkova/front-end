@@ -15,6 +15,7 @@ for (let i = 0; i < SQUARES_NUMBER; i++) {
     board.append(square);
 
     // add an event listener for each of the squares
+    // ЗАМЫКАНИЕ
     square.addEventListener('mouseover', () => setColor(square));
 
     square.addEventListener('mouseleave', () => removeColor(square));
