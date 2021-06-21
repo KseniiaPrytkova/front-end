@@ -4,6 +4,7 @@ const screens = document.querySelectorAll('.screen');
 const timeList = document.querySelector('#time-list');
 const timeEl = document.querySelector('#time');
 const board = document.querySelector('#board');
+const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
 // determine which button was pressed and how much time put into the game
 let time = 0;
 let score = 0;
@@ -73,6 +74,8 @@ function finishGame() {
 function createRandomCircle() {
     const circle = document.createElement('div');
     const size = getRandomNumber(10, 60);
+    const color = getRandomColor();
+    // console.log(color);
     // const qqq = board.getBoundingClientRect();
     // console.log(qqq);
     // деструктуризация
@@ -87,10 +90,16 @@ function createRandomCircle() {
     circle.style.height = `${size}px`;
     circle.style.top = `${y}px`;
     circle.style.left = `${x}px`;
+    circle.style.background = color;
 
     board.append(circle);
 }
 
 function getRandomNumber(min, max) {
     return Math.round(Math.random() * (max - min) + min);
+}
+
+function getRandomColor() {
+    const index = Math.floor(Math.random() * colors.length);
+    return colors[index];
 }

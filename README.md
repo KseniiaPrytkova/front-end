@@ -23,3 +23,6 @@ https://jsfiddle.net/kseniiaprytkova/q05uync9/
 https://jsfiddle.net/kseniiaprytkova/1pqxw3va/1/
 
 ![board](src/board.gif)
+
+##  Game
+https://jsfiddle.net/kseniiaprytkova/Lgrmzp84/2/
