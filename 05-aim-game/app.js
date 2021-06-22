@@ -104,3 +104,18 @@ function getRandomColor() {
     const index = Math.floor(Math.random() * colors.length);
     return colors[index];
 }
+
+// call this fn in browsers console
+function winTheGame() {
+    function kill() {
+        const circle =  document.querySelector('.circle');
+
+        if(circle) {
+            // so that the browser thinks that we have clicked on it
+            // that will remove only 1 circle; need to use intervals for many 
+            circle.click();
+        }
+    }
+
+    setInterval(kill, 75);
+}
