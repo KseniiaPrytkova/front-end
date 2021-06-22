@@ -26,3 +26,5 @@ https://jsfiddle.net/kseniiaprytkova/1pqxw3va/1/
 
 ##  Game
 https://jsfiddle.net/kseniiaprytkova/Lgrmzp84/2/
+
+![game](src/game.gif)

@@ -4,7 +4,8 @@ const screens = document.querySelectorAll('.screen');
 const timeList = document.querySelector('#time-list');
 const timeEl = document.querySelector('#time');
 const board = document.querySelector('#board');
-const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+// const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+const colors = ['#e74c3c', '#8e44ad', '#3498db', '#e67e22', '#2ecc71'];
 // determine which button was pressed and how much time put into the game
 let time = 0;
 let score = 0;
