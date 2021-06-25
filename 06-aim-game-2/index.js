@@ -10,6 +10,7 @@ var $timeHeader = document.querySelector('#time-header');
 var $resultHeader = document.querySelector('#result-header');
 var $gameTime = document.querySelector('#game-time');
 
+var colors = ['red', 'blue', 'green', 'yellow', 'pink'];
 var score = 0;
 var isGameStarted = false;
 
@@ -19,20 +20,25 @@ $game.addEventListener('click', handleBoxClick);
 // input change event
 $gameTime.addEventListener('input', setGameTime);
 
+function show($el) {
+    $el.classList.remove('hide');
+}
+
+function hide($el) {
+    $el.classList.add('hide');
+}
 
 function startGame() {
     score = 0;
     setGameTime();
     // block input if the game has started
     $gameTime.setAttribute('disabled', true);
-    $timeHeader.classList.remove('hide');
-    $resultHeader.classList.add('hide');
     isGameStarted = true;
     console.log('Start');
     // the field should turn white when the game starts
     $game.style.backgroundColor = '#fff';
     // hide the button when the game starts
-    $start.classList.add('hide');
+    hide($start);
 
     var interval = setInterval(function() {
         var time = parseFloat($time.textContent); 
@@ -58,18 +64,20 @@ function setGameTime() {
     // convert to the number + OR parseInt
     var time = +$gameTime.value;
     $time.textContent = time.toFixed(1);
+    show($timeHeader);
+    hide($resultHeader);
 }
 
 function endGame() {
     isGameStarted = false;
     setGameScore();
     $gameTime.removeAttribute('disabled');
-    $start.classList.remove('hide');
+    show($start);
     // remove squares
     $game.innerHTML = '';
     $game.style.backgroundColor = '#ccc';
-    $timeHeader.classList.add('hide');
-    $resultHeader.classList.remove('hide');
+    hide($timeHeader);
+    show($resultHeader);
 
 }
 
@@ -97,12 +105,14 @@ function renderBox() {
     console.log(gameSize);
     var maxTop = gameSize.height - boxSize;
     var maxLeft = gameSize.width - boxSize;
+    // getRandom() rounds towards the lowest value - no need in length - 1
+    var randomColorIndex = getRandom(0, colors.length);
 
 
     box.style.height = box.style.width = boxSize + 'px';
     // the position of the box will be calculated relative to the borders of the outer square
     box.style.position = 'absolute';
-    box.style.backgroundColor = '#000'
+    box.style.backgroundColor = colors[randomColorIndex];
     // so that the box fits into the game block
     // box.style.top = '50px';
     box.style.top = getRandom(0, maxTop) + 'px';
