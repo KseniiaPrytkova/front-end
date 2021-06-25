@@ -28,3 +28,8 @@ https://jsfiddle.net/kseniiaprytkova/1pqxw3va/1/
 https://jsfiddle.net/kseniiaprytkova/Lgrmzp84/2/
 
 ![game](src/game.gif)
+
+##  Game 2
+https://jsfiddle.net/kseniiaprytkova/4ev3us6m/1/
+
+![game_2](src/game_2.gif)
