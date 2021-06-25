@@ -1,26 +1,50 @@
 // make Start button life
 // style guide: if it is an element with is a node type, for ex.,
 // we pick it up using the querySelector() fn, we will denote it by $
+// NODES
 var $start = document.querySelector('#start');
 var $game = document.querySelector('#game');
+var $time = document.querySelector('#time');
 
 var score = 0;
+var isGameStarted = false;
 
 //add event listener to the button
 $start.addEventListener('click', startGame);
 $game.addEventListener('click', handleBoxClick);
 
 function startGame() {
+    isGameStarted = true;
     console.log('Start');
     // the field should turn white when the game starts
     $game.style.backgroundColor = '#fff';
     // hide the button when the game starts
     $start.classList.add('hide');
 
+    var interval = setInterval(function() {
+        var time = parseFloat($time.textContent); 
+        console.log('interval', $time.textContent);
+        
+        if (time <= 0) {
+            clearInterval(interval);
+            endGame();
+        } else {
+            $time.textContent = (time - 0.1).toFixed(1);
+        }
+    }, 100);
+
     renderBox();
 }
 
+function endGame() {
+    isGameStarted = false;
+}
+
 function handleBoxClick(event) {
+    if (!isGameStarted) {
+        return;
+    }
+
     // console.log(event.target.dataset);
     if (event.target.dataset.box  ) {
         score++;
