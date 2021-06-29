@@ -33,3 +33,8 @@ https://jsfiddle.net/kseniiaprytkova/Lgrmzp84/2/
 https://jsfiddle.net/kseniiaprytkova/4ev3us6m/1/
 
 ![game_2](src/game_2.gif)
+
+##  Plugin (dropdown without <select> tag)
+https://jsfiddle.net/kseniiaprytkova/dryg9pvs/
+
+![plugin](src/plugin.gif)

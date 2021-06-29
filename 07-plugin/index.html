@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Plugin</title>
+    <style>
+        /* so that the element does not go beyond the boundaries of the general block */
+        * {
+            box-sizing: border-box;
+        }
+
+        .app {
+            width: 100%;
+            /* full screen size */
+            height: 100vh;
+            /* so that there are no horizontal and vertical scrolls */
+            overflow: hidden;
+            display: flex;
+            /* align everything to the center */
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .dropdown {
+            /* so that the menu appears inside this particular block */
+            position: relative;
+            width: 400px;
+        }
+
+        /* if class dropdown has class open, then set to dropdown__menu
+        display: block value */
+        .dropdown.open .dropdown__menu {
+            display: block;
+        }
+
+        .dropdown__label {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+            /* this width is taken from the parent (dropdown) whose width is 400px */
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .dropdown__menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            /* the menu will be hidden by default */
+            display: none;
+            border-radius: 5px;
+            border: 1px solid black;
+            /* so that the dropdown does not overlap the main content that can go under this list */
+            position: absolute;
+            width: 100%;
+            top: 29px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .dropdown__menu li {
+            padding: 5px 10px;
+        }
+
+        .dropdown__menu li:hover {
+            /* .2 - opacity 20% */
+            background: rgba(0, 0, 0, .2);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="app">
+        <div class="dropdown" id="dropdown">
+
+            <div class="dropdown__label">
+                <!-- Selected -->
+            </div>
+
+            <ul class="dropdown__menu">
+                <!-- <li>Item</li>
+                <li>Item</li>
+                <li>Item</li> -->
+            </ul>
+
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
